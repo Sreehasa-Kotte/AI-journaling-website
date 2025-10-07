@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# SQLite DB file
+journal.db
+
+# Environment variables
+.env

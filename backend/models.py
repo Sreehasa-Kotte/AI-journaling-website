@@ -1,15 +1,11 @@
-# backend/models.py
-
 from sqlalchemy import Column, Integer, String, Text, DateTime
-from database import Base
 from datetime import datetime
+from database import Base
 
-class JournalEntry(Base):
-    __tablename__ = "journal_entries"
+class journal(Base):
+    __tablename__ = "journal"
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, nullable=True)
+    title = Column(String, nullable=False)
     content = Column(Text, nullable=False)
-    mood = Column(String, nullable=True)
-    ai_summary = Column(Text, nullable=True)
-    date = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=datetime.utcnow)
